@@ -30,8 +30,6 @@ CREATE TABLE Storage (
     ProductID varchar(10) NOT NULL PRIMARY KEY,
     Storage_Date DATE NOT NULL,
     Product_NameID varchar(10) FOREIGN KEY REFERENCES ProductList(Product_NameID),
-    Product_Name Nvarchar(255) NOT NULL,
-    Person_Name Nvarchar(100) NOT NULL,
     Person_ID varchar(10) FOREIGN KEY REFERENCES Responsibility(Person_ID)
 );
 GO
@@ -57,27 +55,27 @@ INSERT INTO Responsibility (Person_ID, Person_Name, Person_Address, Person_Phone
 ('R004', 'Emily Davis', '101 Oak St, Ogdenville', '555-456-7890'),
 ('R005', 'William Brown', '202 Pine St, North Haverbrook', '555-567-8901');
 ------------------
-INSERT INTO Storage (ProductID, Storage_Date, Product_NameID, Product_Name, Person_Name, Person_ID) VALUES
-('S001', '2024-01-01', 'i3', 'Chip Intel core i3', 'John Smith', 'R001'),
-('S002', '2024-01-02', 'i5', 'Chip Intel core i5', 'Jane Doe', 'R002'),
-('S003', '2024-01-03', 'i3', 'Chip Intel core i3', 'John Smith', 'R001'),
-('S004', '2024-01-04', 'i9', 'Chip Intel core i9', 'Emily Davis', 'R004'),
-('S005', '2024-01-05', 'i11', 'Chip Intel core i11', 'William Brown', 'R005'),
-('S006', '2024-01-06', 'RTX 40xx', 'VGA Nvidia RTX 40xx', 'John Smith', 'R001'),
-('S007', '2024-01-07', 'AMD 5xxx', 'VGA AMD Radeon 5xxx', 'Jane Doe', 'R002'),
-('S008', '2024-01-08', 'AMD 5xxx', 'VGA AMD Radeon 5xxx', 'John Smith', 'R001'),
-('S009', '2024-01-09', 'RTX 40xx', 'VGA Nvidia RTX 40xx', 'Emily Davis', 'R004'),
-('S010', '2024-01-10', 'AMD 5xxx', 'VGA AMD Radeon 5xxx', 'Emily Davis', 'R004'),
-('S011', '2024-01-11', 'i5', 'Chip Intel core i5', 'Jane Doe', 'R002'),
-('S012', '2024-01-12', 'i5', 'Chip Intel core i5', 'John Smith', 'R001'),
-('S013', '2024-01-13', 'RTX 40xx', 'VGA Nvidia RTX 40xx', 'Emily Davis', 'R004'),
-('S014', '2024-01-14', 'i9', 'Chip Intel core i9', 'William Brown', 'R005'),
-('S015', '2024-01-15', 'i11', 'Chip Intel core i11', 'Jane Doe', 'R002'),
-('S016', '2024-01-16', 'RTX 10xx', 'VGA Nvidia RTX 10xx', 'Jane Doe', 'R002'),
-('S017', '2024-01-17', 'i5', 'Chip Intel core i5', 'Emily Davis', 'R004'),
-('S018', '2024-01-18', 'i11', 'Chip Intel core i11', 'Jane Doe', 'R002'),
-('S019', '2024-01-19', 'i11', 'Chip Intel core i11', 'William Brown', 'R005'),
-('S020', '2024-01-20', 'AMD 5xxx', 'VGA AMD Radeon 5xxx', 'John Smith', 'R001');
+INSERT INTO Storage (ProductID, Storage_Date, Product_NameID, Person_ID) VALUES
+('S001', '2024-01-01', 'i3','R001'),
+('S002', '2024-01-02', 'i5','R002'),
+('S003', '2024-01-03', 'i3','R001'),
+('S004', '2024-01-04', 'i9','R004'),
+('S005', '2024-01-05', 'i11','R005'),
+('S006', '2024-01-06', 'RTX 40xx','R001'),
+('S007', '2024-01-07', 'AMD 5xxx','R002'),
+('S008', '2024-01-08', 'AMD 5xxx','R001'),
+('S009', '2024-01-09', 'RTX 40xx','R004'),
+('S010', '2024-01-10', 'AMD 5xxx','R004'),
+('S011', '2024-01-11', 'i5','R002'),
+('S012', '2024-01-12', 'i5','R001'),
+('S013', '2024-01-13', 'RTX 40xx','R004'),
+('S014', '2024-01-14', 'i9','R005'),
+('S015', '2024-01-15', 'i11','R002'),
+('S016', '2024-01-16', 'RTX 10xx','R002'),
+('S017', '2024-01-17', 'i5','R004'),
+('S018', '2024-01-18', 'i11','R002'),
+('S019', '2024-01-19', 'i11','R005'),
+('S020', '2024-01-20', 'AMD 5xxx','R001');
 
 -- Câu 4 - bài 7
 SELECT * FROM ProductList
