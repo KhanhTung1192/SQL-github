@@ -95,3 +95,4 @@ ALTER TABLE OrderTable
 DROP CONSTRAINT FK_ProductID;
 
 SELECT * FROM OrderTable
+
